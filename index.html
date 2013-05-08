@@ -7,7 +7,7 @@
         <title>anchr :: dynamic inline page anchors</title>
         <!-- <link rel="stylesheet" href="css/style.css"> -->
         <style>
-			p {
+			p, h1, h2, h3, h4, h5, ul, ol, blockquote {
 
 				-webkit-transition: background-color .5s ease;
 				   -moz-transition: background-color .5s ease;
@@ -138,6 +138,15 @@
         	var elements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'ul', 'ol', 'blockquote'],
         		container = document.querySelectorAll('body')[0];
 
+            var Anchr = function (options) {
+                var self = this;
+
+                this.defaults = {
+                    elements: ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'ul', 'ol', 'blockquote'],
+                    container: 'body'
+                }
+            };
+
         	function getElements () {
         		var containerEls = [];
         		for (var el in elements) {
@@ -192,25 +201,31 @@
         	function hasDefault () {
         		var hash = window.location.hash.slice(1, window.location.hash.length),
         			el = document.getElementById(hash) ? true :
-        			 	 document.getElementsByName(hash) ? true : false;
+        			 	 document.getElementsByName(hash).length > 0 ? true : false;
 
         		return el;
         	}
+
+            function cleanHash (hash) {
+                // body...
+            }
 
         	function scroll() {
         		if(window.location.hash) {
         			var hash = window.location.hash,
         				i = 0,
         				els,
-        				el;
+        				el,
+                        pos;
 
     				if (hash.indexOf('[') > -1 && hash.indexOf(']') > -1) {
     					i = hash.slice(hash.indexOf('[') + 1, hash.indexOf(']')) - 1;
-    					hash = hash.slice(0, hash.indexOf('['));
-    				}
+    					hash = hash.slice(1, hash.indexOf('['));
+    				} else {
+                        hash = hash.slice(1, hash.length);
+                    }
 
         			if (!hasDefault()) {
-        				hash = hash.slice(1, hash.length);
 
     					els = document.querySelectorAll(hash);
         				
@@ -219,10 +234,13 @@
         				}
         				el = els[i];
 
-        				var pos = position(el);
+        				pos = position(el);
         				window.scrollTo(pos.left, pos.top);
-        				highlight(el);
-        			}
+        			} else {
+                        el = document.getElementById(hash);
+                    }
+                    
+                    highlight(el);
         		}
         	}
 

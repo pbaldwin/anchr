@@ -1,255 +1,295 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>anchr :: dynamic inline page anchors</title>
-        <!-- <link rel="stylesheet" href="css/style.css"> -->
-        <style>
-			p, h1, h2, h3, h4, h5, ul, ol, blockquote {
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>anchr :: dynamic inline page anchors</title>
+      <!-- <link rel="stylesheet" href="css/style.css"> -->
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font: 100%/1.6 Palatino, Serif;
+          color:#333;
+        }
+        p, h1, h2, h3, h4, h5, ul, ol, blockquote {
 
-                padding:1em;
+          padding:1em;
+          max-width: 45em;
 
-				-webkit-transition: background-color .5s ease;
-				   -moz-transition: background-color .5s ease;
-				    -ms-transition: background-color .5s ease;
-				     -o-transition: background-color .5s ease;
-				        transition: background-color .5s ease;
-			}
+          -webkit-transition: background-color .5s ease;
+             -moz-transition: background-color .5s ease;
+              -ms-transition: background-color .5s ease;
+               -o-transition: background-color .5s ease;
+                  transition: background-color .5s ease;
+        }
 
-			.s-highlight {
-
-				background-color: hsla(210, 45%, 80%, .5);
-			}
-        </style>
+        .anchr-highlight {
+          background-color: hsla(210, 45%, 80%, .5);
+        }
+      </style>
     </head>
     <body>
 
-    	<h1>Header</h1>
+      <h1>Header</h1>
 
-    	<p class="hash">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+      <p class="hash">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
 
-    	<p class="hash">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+      <p class="hash">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
 
-    	<p class="hash">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+      <p class="hash">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
 
-		<h2 id="thing">Sub Header</h2>
+      <h2 id="thing">Sub Header</h2>
 
-    	<p class="hash">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+      <p class="hash">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
 
-    	<p class="mint">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+      <p class="mint">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
 
-    	<p class="hash">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+      <p class="hash">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
 
-		<h2>Sub Header 2</h2>
+      <h2>Sub Header 2</h2>
 
-    	<p class="hash">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+      <p class="hash">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
 
-    	<p class="hash">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+      <p class="hash">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
 
-    	<p class="hash">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+      <p class="hash">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
 
-    	<p class="hash">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
+      <p class="hash">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
 
 
-        <script>
+    <script>
 
-        	/**
-        	 * Outline
-        	 *
-        	 * Hashed URL scrolls to element - done
-        	 * Highlight said element - done
-        	 *
-        	 * Hovering over element shows link element
-        	 * clicking link element opens url and highlights text
-        	 * 
-        	 * 
-        	 */
-        	
-        	var elements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'ul', 'ol', 'blockquote'],
-        		container = document.querySelectorAll('body')[0];
+      /**
+       * Outline
+       *
+       * Hashed URL scrolls to element - done
+       * Highlight said element - done
+       *
+       * Hovering over element shows link element
+       * clicking link element opens url and highlights text
+       * 
+       * 
+       */
 
-            var Anchr = function (options) {
-                var self = this;
+      function hasClass(ele,cls) {
+        return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+      }
 
-                this.defaults = {
-                    elements: ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'ul', 'ol', 'blockquote'],
-                    container: 'body'
-                }
-            };
+      function addClass(ele, cls) {
+        if (!hasClass(ele,cls)) ele.className += " "+cls;
+      }
 
-        	function getElements () {
-        		var containerEls = [];
-        		for (var el in elements) {
-        			var els = container.querySelectorAll(elements[el]);
-        			if (els.length > 0) {
-        				for (var e in els) {
-        					if (typeof(els[e]) === 'object') {
-			        			containerEls.push(els[e]);
-			        		}
-		        		}
-	        		}
-        		}
-    			return containerEls;
-        	}
+      function removeClass(ele,cls) {
+        if (hasClass(ele,cls)) {
+          var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+          ele.className=ele.className.replace(reg,' ');
+        }
+      }
 
-        	function position(el) {
-        		var top = 0,
-        			left = 0,
-        			ele = el;
+      function toArray(object) {
+        var array = [];
+        for (var i = object.length >>> 0; i--;) {
+          array[i] = object[i];
+        }
+        return array;
+      }
 
-    			while (ele.tagName != "BODY") {
-    				top += ele.offsetTop;
-    				left += ele.offsetLeft;
-    				ele = ele.offsetParent;
-    			}
+      var Anchr = function (options) {
+          var self = this;
 
-    			return { top : top, left : left };
-        	}
+          self.defaults = {
+              anchrTags: ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'ul', 'ol', 'blockquote'],
+              containerTag: 'body'
+          }
 
-        	function hasClass(ele,cls) {
-				return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
-			}
+          self.container = document.querySelectorAll(self.defaults.containerTag)[0];
+          self.elements = self.getElements();
 
-        	function addClass(ele, cls) {
-        		if (!hasClass(ele,cls)) ele.className += " "+cls;
-        	}
+          self.setup();
+          self.scroll();
 
-			function removeClass(ele,cls) {
-				if (hasClass(ele,cls)) {
-					var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
-					ele.className=ele.className.replace(reg,' ');
-				}
-			}
+      };
 
-        	function highlight(el) {
-        		addClass(el, 's-highlight');
-        		window.setTimeout(function () {
-        			removeClass(el, 's-highlight')
-        		}, 2000);
-        	}
+      Anchr.prototype.getElements = function () {
+        var self = this,
+            elementTags = this.defaults.anchrTags.join(", ");
 
-        	function hasDefault () {
-        		var hash = window.location.hash.slice(1, window.location.hash.length),
-        			el = document.getElementById(hash) ? true :
-        			 	 document.getElementsByName(hash).length > 0 ? true : false;
+        return toArray(self.container.querySelectorAll(elementTags));
+      }
 
-        		return el;
-        	}
+      Anchr.prototype.setup = function () {
+        var self = this;
 
-            function cleanHash (hash) {
-                // body...
+        for (var i = 0; i < self.elements.length; i++) {
+          if (self.elements[i].typeof = 'object') {
+            var el = self.elements[i];
+
+            el.addEventListener('mouseover', function (event) {
+              var e = event.target;
+              self.showLink(e); 
+            }, false);
+
+            el.addEventListener('mouseout', function (event) {
+              var e = event.target;
+              self.removeLink(e) 
+            }, false);
+          }
+        }
+      }
+
+      Anchr.prototype.showLink = function (el) {
+        var self = this;
+
+        addClass(el, 'anchr-highlight');
+        //console.log(el);
+      }
+
+      Anchr.prototype.removeLink = function (el) {
+        var self = this;
+
+        removeClass(el, 'anchr-highlight');
+        //console.log(el);
+      }
+
+      Anchr.prototype.position = function (el) {
+        var top = 0,
+            left = 0,
+            ele = el;
+
+        while (ele.tagName != 'BODY') {
+          top += ele.offsetTop;
+          left += ele.offsetLeft;
+          ele = ele.offsetParent;
+        }
+
+        return { top : top, left : left };
+      };
+
+      Anchr.prototype.highlight = function (el) {
+
+        addClass(el, 'anchr-highlight');
+        window.setTimeout(function () {
+          removeClass(el, 'anchr-highlight')
+        }, 2000);
+      };
+
+      Anchr.prototype.hasDefault = function () {
+        var hash = window.location.hash.slice(1, window.location.hash.length),
+          el = document.getElementById(hash) ? true :
+             document.getElementsByName(hash).length > 0 ? true : false;
+
+        return el;
+      };
+
+      Anchr.prototype.scroll = function () {
+        if(window.location.hash) {
+          var self = this,
+              hash = window.location.hash,
+              i = 0,
+              els,
+              el,
+              pos;
+
+        if (hash.indexOf('[') > -1 && hash.indexOf(']') > -1) {
+          i = hash.slice(hash.indexOf('[') + 1, hash.indexOf(']')) - 1;
+          hash = hash.slice(1, hash.indexOf('['));
+        } else {
+          hash = hash.slice(1, hash.length);
+        }
+
+        if (!self.hasDefault()) {
+          els = document.querySelectorAll(hash);
+            
+            if (i > (els.length)) {
+              i = els.length - 1;
             }
+            el = els[i];
 
-        	function scroll() {
-        		if(window.location.hash) {
-        			var hash = window.location.hash,
-        				i = 0,
-        				els,
-        				el,
-                        pos;
+            pos = self.position(el);
+            window.scrollTo(pos.left, pos.top);
+          } else {
+            el = document.getElementById(hash);
+          }
+                
+          this.highlight(el);
+        }
+      };
 
-    				if (hash.indexOf('[') > -1 && hash.indexOf(']') > -1) {
-    					i = hash.slice(hash.indexOf('[') + 1, hash.indexOf(']')) - 1;
-    					hash = hash.slice(1, hash.indexOf('['));
-    				} else {
-                        hash = hash.slice(1, hash.length);
-                    }
-
-        			if (!hasDefault()) {
-
-    					els = document.querySelectorAll(hash);
-        				
-        				if (i > (els.length)) {
-        					i = els.length - 1;
-        				}
-        				el = els[i];
-
-        				pos = position(el);
-        				window.scrollTo(pos.left, pos.top);
-        			} else {
-                        el = document.getElementById(hash);
-                    }
-                    
-                    highlight(el);
-        		}
-        	}
-
-        	window.onload = function () {
-        		scroll();
-        		console.log(hasDefault());
-        	}
-        </script>
+      (function () {
+        window.anchr = new Anchr();
+      }());
+    </script>
     </body>
 </html>

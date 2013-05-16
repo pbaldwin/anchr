@@ -15,7 +15,7 @@
         }
         p, h1, h2, h3, h4, h5, ul, ol, blockquote {
 
-          padding:1em;
+          padding:1em 5%;
           max-width: 45em;
 
           -webkit-transition: background-color .5s ease;
@@ -27,6 +27,10 @@
 
         .anchr-highlight {
           background-color: hsla(210, 45%, 80%, .5);
+        }
+
+        .anchr-LinkBox {
+          display: inline-block;
         }
       </style>
     </head>
@@ -190,11 +194,14 @@
       }
 
       Anchr.prototype.setup = function () {
-        var self = this;
+        var self = this,
+            el;
 
         for (var i = 0; i < self.elements.length; i++) {
           if (self.elements[i].typeof = 'object') {
-            var el = self.elements[i];
+            el = self.elements[i];
+
+            el.anchrLink = self.makeLink();
 
             el.addEventListener('mouseover', function (event) {
               var e = event.target;
@@ -209,18 +216,33 @@
         }
       }
 
-      Anchr.prototype.showLink = function (el) {
-        var self = this;
+      Anchr.prototype.makeLink = function (el) {
+        var linkBox = document.createElement('div');
 
+        linkBox.setAttribute('class', 'anchr-LinkBox');
+        linkBox.setAttribute('id', 'anchr-LinkBox')
+
+        linkBox.innerHTML = '<label class="anchr-Label" for="anchr-LinkField">link</link>' +
+                            ' <input type="text" class="anchr-LinkField" value="something real here" id="anchr-LinkField">';
+
+        return linkBox;
+      }
+
+      Anchr.prototype.showLink = function (el) {
+        var self = this,
+            link = el.anchrLink;
+
+        el.appendChild(link);
         addClass(el, 'anchr-highlight');
-        //console.log(el);
       }
 
       Anchr.prototype.removeLink = function (el) {
-        var self = this;
+        var self = this,
+            link = document.getElementById('anchr-LinkBox');
+
+        el.removeChild(link);
 
         removeClass(el, 'anchr-highlight');
-        //console.log(el);
       }
 
       Anchr.prototype.position = function (el) {
